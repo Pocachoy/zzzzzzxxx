@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перенаправление...</title>
+    <script>
+        function redirect() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                // Ссылка на карточку для iPhone
+                window.location.href = "https://drive.google.com/uc?export=download&id=1WE03JfMt23VG6qCSaNYNW7NbhOUrD5qT";
+            } else if (/Android/i.test(userAgent)) {
+                // Ссылка на карточку для Android
+                window.location.href = "https://drive.google.com/uc?export=download&id=14xGDbcQSC-qDI4dYb1XI4Z44cvyYtMLW";
+            } else {
+                // Перенаправление по умолчанию
+                window.location.href = "https://drive.google.com/uc?export=download&id=1WE03JfMt23VG6qCSaNYNW7NbhOUrD5qT";
+            }
+        }
+    </script>
+</head>
+<body onload="redirect()">
+</body>
+</html>
